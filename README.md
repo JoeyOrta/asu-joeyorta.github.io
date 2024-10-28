@@ -7,4 +7,4 @@ Github Username: JoeyOrta
 Repo: https://github.com/JoeyOrta/asu-joeyorta.github.io
 Pages: asu-joeyorta.github.io
 
-# For Our VSCode Commits
+# For Our Bash Commits
