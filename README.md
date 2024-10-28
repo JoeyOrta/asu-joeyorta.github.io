@@ -4,7 +4,7 @@ Github Username: JoeyOrta
 
 # Github Pages URL
 
-Repo: https://github.com/JoeyOrta/asu-joeyorta.github.io
-Pages: asu-joeyorta.github.io
+Repo: https://github.com/JoeyOrta/joeyorta.github.io.git
+Pages: joeyorta.github.io.git
 
 # For Our Bash Commits
