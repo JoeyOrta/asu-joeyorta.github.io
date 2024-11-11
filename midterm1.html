@@ -112,7 +112,7 @@
 </head>
 <body>
 
-  <audio id="audioPlayer" src="10APPLE.mp3" autoplay loop></audio>
+  <audio id="audioPlayer" src="10APPLE.mp3" autoplay loop muted></audio>
 
   <div class="container">
     <div class="title">JOSEPH ORTA</div>
@@ -134,11 +134,17 @@
   </div>
 
   <script>
-   // javascript knowledge from aco 101 and 102
+    // JavaScript to play audio on load and control volume
     const audioPlayer = document.getElementById('audioPlayer');
     const volumeSlider = document.getElementById('volumeSlider');
 
-  
+    // Play audio on page load
+    window.addEventListener('load', () => {
+      audioPlayer.muted = false;  // Unmute the audio
+      audioPlayer.play();  // Start playing
+    });
+
+    // Update volume based on slider input
     volumeSlider.addEventListener('input', function() {
       audioPlayer.volume = volumeSlider.value;
     });
