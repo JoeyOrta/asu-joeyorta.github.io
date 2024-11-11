@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Orta's Favorite Artists</title>
+  <style>
+    @font-face {
+      font-family: 'Yagi Double';
+      src: url('dxsyagidouble.ttf') format('truetype');
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('kf.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow-y: auto;
+    }
+
+    /* for yeoji animation*/
+    .falling-text {
+      position: fixed;
+      font-family: 'Yagi Double', sans-serif;
+      font-size: 24px;
+      color: #ff6347;
+      opacity: 0.7;
+      pointer-events: none;
+      animation: fall 5s linear infinite;
+    }
+
+
+    .falling-text.left {
+      left: 10px;
+      animation-delay: 0s;
+    }
+
+
+    .falling-text.right {
+      right: 10px;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fall {
+      0% { top: -50px; opacity: 0.7; }
+      20% { opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
+    }
+
+    .container {
+      max-width: 800px;
+      min-height: 600px;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .artist {
+      background-color: #f0f0f0;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .artist img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .artist img:hover {
+      animation: wobble 0.2s infinite alternate;
+    }
+
+    .artist a {
+      color: #333;
+      font-family: 'Yagi Double', sans-serif; /* Apply Yagi Double font */
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .artist a:hover {
+      color: #ff6347;
+    }
+
+    @keyframes wobble {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      color: white;
+      background-color: #333;
+      border: none;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!--wanted yeoji to fall from sides like a ribbon but couldnt figure it out, so this will do -->
+  <div class="falling-text left">Yeoji</div>
+  <div class="falling-text right">Yeoji</div>
+
+  <div class="container">
+    <h1>Favorite Artists</h1>
+    <div class="artist">
+      <img src="kiss.jpeg" alt="Kiss Facility">
+      <p><a href="https://open.spotify.com/artist/5gHuonqo1YwbLPKQAl7jD5">Kiss Facility</a></p>
+    </div>
+    <div class="artist">
+      <img src="ea.jpg" alt="Eartheater">
+      <p><a href="https://open.spotify.com/artist/18ca9d5EU5R1AhVKPR1cm0">Eartheater</a></p>
+    </div>
+    <div class="artist">
+      <img src="sega.jpeg" alt="Sega Bodega">
+      <p><a href="https://open.spotify.com/artist/1ZvF4Sgnre3Rk2CpiNy077">Sega Bodega</a></p>
+    </div>
+    <div class="button-container">
+      <a href="midterm1.html" class="button">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
