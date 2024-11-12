@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joseph Orta - Game Developer & Music Artist</title>
   <style>
-    /* Using a new font */
+    /* using a new font */
     @font-face {
       font-family: 'Yagi Double';
       src: url('dxsyagidouble.ttf') format('truetype');
@@ -90,7 +90,7 @@
       transform: scale(1.1);
     }
 
-    /* Play/Pause Button Styling */
+    
     .play-pause-button {
       display: inline-block;
       margin-top: 20px;
@@ -141,9 +141,10 @@
       <a href="midterm2.html" class="button">Favorite Artists</a>
       <a href="https://www.instagram.com/yeojt1ld/" class="button">Instagram</a>
       <a href="https://jjorta.myportfolio.com/" class="button">Portfolio</a>
+      <a href="midterm3.html" class="button">Contact</a> <!-- New Contact Button -->
     </div>
 
-    <!-- Play/Pause Button -->
+ 
     <button class="play-pause-button" id="playPauseButton">Play Music</button>
   </div>
 
@@ -153,12 +154,11 @@
   </div>
 
   <script>
-    // JavaScript to control audio playback and volume
+    // using javaScript learned from ACO classes to control audio playback and volume
     const audioPlayer = document.getElementById('audioPlayer');
     const playPauseButton = document.getElementById('playPauseButton');
     const volumeSlider = document.getElementById('volumeSlider');
 
-    // Toggle play/pause functionality
     playPauseButton.addEventListener('click', () => {
       if (audioPlayer.paused) {
         audioPlayer.play();
@@ -169,7 +169,7 @@
       }
     });
 
-    // Volume control with the slider
+    // volume slider
     volumeSlider.addEventListener('input', function() {
       audioPlayer.volume = volumeSlider.value;
     });

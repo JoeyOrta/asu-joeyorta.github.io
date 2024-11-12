@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,8 @@
       background-size: cover;
       color: #333;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
       margin: 0;
       overflow-y: auto;
@@ -40,12 +40,10 @@
       animation: fall 5s linear infinite;
     }
 
-
     .falling-text.left {
       left: 10px;
       animation-delay: 0s;
     }
-
 
     .falling-text.right {
       right: 10px;
@@ -60,7 +58,6 @@
 
     .container {
       max-width: 800px;
-      min-height: 600px;
       text-align: center;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.9); 
@@ -96,7 +93,7 @@
 
     .artist a {
       color: #333;
-      font-family: 'Yagi Double', sans-serif; /* Apply Yagi Double font */
+      font-family: 'Yagi Double', sans-serif;
       font-size: 20px;
       font-weight: bold;
       text-decoration: none;
@@ -132,13 +129,55 @@
       background-color: #555;
       transform: scale(1.1);
     }
+
+    /* zigzag */
+    .zigzag-container {
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .zigzag-item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .zigzag-item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .zigzag-left {
+      flex-direction: row;
+    }
+
+    .zigzag-right {
+      flex-direction: row-reverse;
+    }
+
+    .zigzag-text {
+      font-size: 16px;
+      color: #333;
+      padding: 10px;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
   </style>
 </head>
 <body>
-  <!--wanted yeoji to fall from sides like a ribbon but couldnt figure it out, so this will do -->
+  
   <div class="falling-text left">Yeoji</div>
   <div class="falling-text right">Yeoji</div>
 
+  
   <div class="container">
     <h1>Favorite Artists</h1>
     <div class="artist">
@@ -155,6 +194,26 @@
     </div>
     <div class="button-container">
       <a href="midterm1.html" class="button">Back to Home</a>
+    </div>
+  </div>
+
+
+  <div class="zigzag-container">
+    <div class="zigzag-item zigzag-left">
+      <img src="kiss.jpeg" alt="Kiss Facility">
+      <p class="zigzag-text">I was introduced to Kiss Facility through finding Sega Bodega. Kiss Facility is a duo of Mayah Alkhateri and Salvador Navarrete (also known as Sega Bodega).
+        Mayah and Sega recently became a couple, and since I was already a big fan of Sega it was natural that I became a fan of his new duo group.
+      </p>
+    </div>
+    <div class="zigzag-item zigzag-right">
+      <img src="ea.jpg" alt="Eartheater">
+      <p class="zigzag-text">The only reason I came across EE was becasue I already listened to Electronic music and just happened to 
+        stumble upon her. Eartheater makes electronic music with ethereal vocals, which was unique to what I had listnted to, however I fell in love. It wasn't an immediate love at 
+        first sight moment, as it took quite a while for me to just give in to her odd visuals and just listen to her music</p>
+    </div>
+    <div class="zigzag-item zigzag-left">
+      <img src="sega.jpeg" alt="Sega Bodega">
+      <p class="zigzag-text">Sega Bodega was one artist who changed my life in terms of music and music production. I found his music through Shygirl, whom I found through one of my favoirte artists, Arca. Sega Bodega's album 'Romeo' was on repeat for me for years and is still one of my top listned album to this day. </p>
     </div>
   </div>
 </body>
