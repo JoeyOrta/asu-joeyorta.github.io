@@ -1,0 +1,145 @@
+/* Import the dxsyagidouble font */
+@font-face {
+    font-family: 'Dxsyagidouble';
+    src: url('dxsyagidouble.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+}
+
+/* Hero Section */
+.new-tracks-hero {
+    height: 50vh;
+    background: url('joey.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.new-tracks-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay for readability */
+    z-index: 1;
+}
+
+.new-tracks-hero .header {
+    z-index: 2; /* Ensure text appears above overlay */
+}
+
+.new-tracks-hero .header h1 {
+    font-family: 'Dxsyagidouble', sans-serif; /* Custom font for YEOJI */
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Tracks Section */
+.tracks-section {
+    padding: 20px;
+    background: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+.tracks-section h2 {
+    font-family: 'Dxsyagidouble', sans-serif; /* Custom font for section titles */
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #03a9f4;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.tracks-section p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #dcdcdc;
+}
+
+/* Track Grid */
+.track-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.track-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.track-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.track-card img {
+    width: 80px; /* Adjust image size */
+    height: 80px; /* Maintain square aspect ratio */
+    border-radius: 10px;
+    margin-right: 10px; /* Add spacing between image and button */
+    vertical-align: middle; /* Align image with button */
+}
+
+.track-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1db954;
+}
+
+.track-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+.track-card .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Spacing between image and button */
+    margin-top: 15px;
+}
+
+.track-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #03a9f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.track-card a:hover {
+    background: #0288d1;
+}

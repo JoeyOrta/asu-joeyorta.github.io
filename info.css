@@ -1,0 +1,102 @@
+/* Import the dxsyagidouble font */
+@font-face {
+    font-family: 'Dxsyagidouble';
+    src: url('dxsyagidouble.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0d0d0d;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.info-hero {
+    height: 50vh;
+    background: linear-gradient(120deg, #1f1f1f, #3f51b5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.info-hero .header h1 {
+    font-family: 'Dxsyagidouble', sans-serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.info-hero .intro-content h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #03a9f4;
+}
+
+.info-hero .intro-content p {
+    margin-top: 10px;
+    max-width: 600px;
+    color: #dcdcdc;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* Artist Details Section */
+.artist-details {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.artist-details .bio,
+.artist-details .highlight,
+.artist-details .fun-facts {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-details .bio:hover,
+.artist-details .highlight:hover,
+.artist-details .fun-facts:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+.artist-details h2 {
+    font-family: 'Dxsyagidouble', sans-serif;
+    font-size: 22px;
+    color: #1db954;
+    margin-bottom: 10px;
+}
+
+.artist-details p,
+.artist-details ul li {
+    font-size: 16px;
+    color: #dcdcdc;
+    margin-bottom: 10px;
+}
+
+.artist-details ul {
+    list-style-type: none;
+    padding: 0;
+}
