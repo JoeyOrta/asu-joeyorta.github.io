@@ -1,7 +1,7 @@
-// Select the track grid container
+
 const trackGrid = document.getElementById('track-grid');
 
-// Array of track data
+
 const tracks = [
     {
         title: "HALFWAY",
@@ -23,14 +23,14 @@ const tracks = [
     }
 ];
 
-// Function to create and display track cards
+
 function displayTracks() {
     tracks.forEach(track => {
-        // Create a new track card
+        
         const trackCard = document.createElement('div');
         trackCard.className = 'track-card';
 
-        // Add content to the track card
+        
         trackCard.innerHTML = `
             <h3>${track.title}</h3>
             <p>${track.description}</p>
@@ -40,10 +40,9 @@ function displayTracks() {
             </div>
         `;
 
-        // Add the track card to the track grid
+       
         trackGrid.appendChild(trackCard);
     });
 }
 
-// Display tracks on page load
 displayTracks();
